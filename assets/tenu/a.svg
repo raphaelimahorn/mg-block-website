@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 118 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-236,-103)">
+        <g id="Tenu-A-lower" serif:id="Tenu A lower">
+            <g transform="matrix(1,0,0,1,0,-1.09104)">
+                <path d="M353.66,207.724C353.66,191.46 340.457,178.256 324.193,178.256L265.259,178.256C248.995,178.256 235.792,191.46 235.792,207.724L235.792,266.658C235.792,282.921 248.995,296.125 265.259,296.125L324.193,296.125C340.457,296.125 353.66,282.921 353.66,266.658L353.66,207.724Z" style="fill:rgb(37,91,99);"/>
+            </g>
+            <g transform="matrix(0.360853,0,0,2.2655,188.461,-377.46)">
+                <path d="M295.429,265.766L295.368,296.843L295.429,265.766Z" style="fill:rgb(12,51,57);stroke:rgb(12,51,57);stroke-width:0.64px;"/>
+            </g>
+            <g transform="matrix(-1.31782,1.61386e-16,-1.35226e-16,-1.10421,683.831,488.31)">
+                <path d="M295.033,201.558L317.439,265.737L272.626,265.737L295.033,201.558Z" style="fill:rgb(193,232,252);"/>
+            </g>
+            <g transform="matrix(1.23648,0,0,1.2986,-154.166,-64.1004)">
+                <rect x="325.277" y="219.896" width="19.104" height="4.548" style="fill:rgb(12,51,57);"/>
+            </g>
+            <g transform="matrix(1.23648,0,0,1.2986,-83.3001,-64.1004)">
+                <rect x="325.277" y="219.896" width="19.104" height="4.548" style="fill:rgb(12,51,57);"/>
+            </g>
+            <g transform="matrix(1.40664,0,0,1.40664,-122.332,-115.079)">
+                <circle cx="300.835" cy="274.934" r="2.099" style="fill:rgb(12,51,57);"/>
+            </g>
+            <g transform="matrix(1.40664,0,0,1.40664,-122.332,-103.268)">
+                <circle cx="300.835" cy="274.934" r="2.099" style="fill:rgb(12,51,57);"/>
+            </g>
+            <path d="M295.276,206.693L301.181,212.598L296.963,216.817L301.181,242.126L300.709,242.126L301.181,242.598L295.276,248.504L289.37,242.598L289.843,242.126L289.37,242.126L293.588,216.817L289.37,212.598L295.276,206.693Z" style="fill:rgb(37,91,99);"/>
+        </g>
+        <g id="head">
+            <g id="head1" serif:id="head" transform="matrix(1.49415,0,0,1.49415,-103.346,-60.2282)">
+                <clipPath id="_clip1">
+                    <path d="M305.864,178.604C305.864,167.719 297.027,158.882 286.142,158.882L246.699,158.882C235.814,158.882 226.977,167.719 226.977,178.604L226.977,218.047C226.977,228.932 235.814,237.769 246.699,237.769L286.142,237.769C297.027,237.769 305.864,228.932 305.864,218.047L305.864,178.604Z"/>
+                </clipPath>
+                <g clip-path="url(#_clip1)">
+                    <circle cx="266.788" cy="150.977" r="29.643" style="fill:white;"/>
+                </g>
+            </g>
+            <g id="head2" serif:id="head" transform="matrix(1.39454,0,0,1.39454,-76.7709,-45.1893)">
+                <circle cx="266.788" cy="150.977" r="29.643"/>
+            </g>
+        </g>
+        <g id="Tenu-A-upper" serif:id="Tenu A upper">
+            <g transform="matrix(1,0,0,1,-6,10)">
+                <path d="M276.42,147.117C269.238,139.531 273.6,126.307 278.579,120.947C285.413,113.59 293.983,111.85 303.039,112.219C323.519,113.053 344.612,141.967 340.176,147.783C335.739,153.599 283.238,154.318 276.42,147.117Z" style="fill:rgb(0,91,29);stroke:black;stroke-width:2.08px;stroke-linecap:round;stroke-linejoin:round;"/>
+            </g>
+            <g transform="matrix(1.21937,0,0,0.904536,-61.0448,14.8178)">
+                <ellipse cx="274.781" cy="140.309" rx="2.422" ry="6.529" style="fill:rgb(179,179,179);"/>
+            </g>
+        </g>
+    </g>
+</svg>

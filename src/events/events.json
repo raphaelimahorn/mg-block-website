@@ -1,0 +1,50 @@
+﻿{
+  "events": [
+    {
+      "title": "4-Daagse - CH-Edition",
+      "from": "2021-07-20",
+      "to": "2021-07-23",
+      "where": "St.Gallen",
+      "tenu": "b",
+      "description": "Das Detachément Réduit absolviert den diesjähringen 4-Tagesmarsch im Raum St.Gallen. Wer einen Bierhalt ausrichten möchte melde sich bei Silber."
+    },
+    {
+      "title": "AAR",
+      "from": "2022-02-??",
+      "where": "Zürich",
+      "tenu": "cps",
+      "tbd": true,
+      "description": "Ein Rückblick auf die vergangene Marschsaison und Initialisierung der nächsten."
+    },
+    {
+      "title": "Marsch um den Zugersee",
+      "from": "2022-05-??",
+      "where": "Zug",
+      "tenu": "b",
+      "tbd": true
+    },
+    {
+      "title": "Berner 2TM",
+      "from": "2022-05-28",
+      "to": "2022-05-29",
+      "where": "Bern",
+      "tenu": "b",
+      "description": "Der traditionelle schweizer Zweitagemarsch bietet ein hervorragendes Training und ist zwingend zu absolvieren um sich für den 4-Daagse anmelden zu können."
+    },
+    {
+      "title": "Test",
+      "from": "2022-09-28",
+      "where": "tbd",
+      "tenu": "a",
+      "tbd": true
+    },
+    {
+      "title": "4-Daagse",
+      "from": "2022-07-16",
+      "to": "2022-07-22",
+      "where": "Nijmegen NL",
+      "tenu": "b",
+      "description": "Nach 2019 wird der 4-Tagesmarsch 2022 endlich wieder in Holland durchgeführt."
+    }
+  ]
+}
