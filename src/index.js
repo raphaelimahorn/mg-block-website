@@ -1,6 +1,6 @@
 ﻿import {Framework} from './framework/framework.js';
 
-await Framework.startModuleOrHome();
+Framework.startModuleOrHome();
 
 const navLinks = document.querySelectorAll('nav > a');
 let activeElement;
