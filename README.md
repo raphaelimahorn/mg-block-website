@@ -21,8 +21,8 @@ sehen.
 
 ### Anlässe
 
-In der Datei <a href="./src/events/events.json">events.json</a> können Anlässe nachgetragen werden. Dabei ist zu beachten,
-dass folgendes Schema eingehalten wird.
+In der Datei <a href="./src/events/events.json">events.json</a> können Anlässe nachgetragen werden. Dabei ist zu
+beachten, dass folgendes Schema eingehalten wird.
 
 ```json
 {
@@ -86,8 +86,8 @@ No further accessibility will be provided, since this is not relevant for the ta
 ### Framework
 
 To register a module `<module>`, it has to be added via adding a hyperlink with a `href="#<module>"`
-to <a href="src/index.html">index.html</a>. The framework will search for a js file in `./<module>/<module>.js` and a html
-file with the same name in the same directory. When ever there is a navigation event (more precise, whenever
+to <a href="src/index.html">index.html</a>. The framework will search for a js file in `./<module>/<module>.js` and a
+html file with the same name in the same directory. When ever there is a navigation event (more precise, whenever
 a `hashchange` event occurs), the framework does the following, considering `location.hash === '#<module>'`:
 
 1. Open module `<module>` from cache or dynamicaly load it async
@@ -95,3 +95,36 @@ a `hashchange` event occurs), the framework does the following, considering `loc
 3. If no `init` function exists or no js file can be found, the home module is loaded
 4. The children of the first `main` element in the dom are replaced with whatever is contained
    in `./<module>/<module>.html`
+   
+Further the framework provides a html helper class, where one can register modules, register replacers to this templates and
+then let the helper replace the placeholders in this template. e.g.
+
+```js
+HtmlHelper.registerTemplateFromString('example', '<h1>$PLACEHOLDER</h1>')
+    .registerReplacer('$PLACEHOLDER', 'Hello world')
+    .replace(); // yields <h1>Hello world</h1>
+
+
+HtmlHelper.registerTemplateFromString('functionExample', <p>$INCREMENT</p>)
+    .registerReplacer('INCREMENT', i => i + 1)
+    .replace(3); // yields <p>4</p>
+```
+
+### Test Framework
+
+To register a test class, the corresponding js-file should be linked as a module to <a href="test/test.html">
+test.html</a>. The test class should look somewhat like this:
+
+```js
+// 1+ test()
+test('<Testee>', () => {
+    // 1+ times desc()
+    desc('<testedMethod>', () => {
+        // 1+ times it()
+        it('should <expectedBehaviour>', () => {
+            // arrange, act ...
+            return Assert.<someAssertion>(/*...*/);
+        });
+    });
+});
+```

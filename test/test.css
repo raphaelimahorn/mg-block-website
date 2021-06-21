@@ -1,0 +1,33 @@
+﻿* {
+    font-family: sans-serif;
+}
+
+.passed::before {
+    content: '☑';
+    color: green;
+}
+
+.failed::before {
+    content: '☒';
+    color: red;
+}
+
+h3 {
+    margin-left: 20px;
+}
+
+p {
+    margin-left: 40px;
+}
+
+.test {
+    padding-bottom: 40px;
+    border-bottom: 1px solid black;
+}
+.test + .test {
+    padding-top: 40px;
+}
+
+p + h3 {
+    margin-top: 40px;
+}
