@@ -25,7 +25,7 @@ function renderEvent(event) {
         .replace("$LOCATION", `${event.where} - ${date}`)
         .replace("$DESC", event.description ?? '')
         .replaceAll("$TENU", getTenuOrDefault(event.tenu));
-    eventWrapper.innerHTML += newEvent;
+    eventWrapper.insertAdjacentHTML('beforeend', newEvent);
 }
 
 function getTenuOrDefault(tenu) {
