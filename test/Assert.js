@@ -1,6 +1,5 @@
 ﻿export class Assert {
     /**
-     *
      * @param func {function:boolean}
      * @param msg {string?} a message displayed in failure case
      */
@@ -8,24 +7,49 @@
         return new Result(func(), msg ?? '');
     }
 
-    static isEqual(actual, expected) {
-        return actual === expected ? Result.success() : Result.fail(
-            `Expected: ${expected}
-Got: ${actual}`);
+    static isEqual(actual, expected, msgPrefix = '') {
+        return actual === expected ? Result.success() : Result.fail(`${msgPrefix}
+    Expected: ${JSON.stringify(expected)}
+    Got: ${JSON.stringify(actual)}`);
     }
 
     /**
-     *
      * @param func {function}
-     * @param msg {string?}
+     * @param msg {string?} the expected error message
      */
     static throws(func, msg) {
         try {
             func();
-        } catch (_) {
+        } catch (e) {
+            if (!!msg) {
+                return Assert.isEqual(e.message, msg, 'expected a different error message');
+            }
             return Result.success();
         }
         return Result.fail(msg ?? 'expected function to throw');
+    }
+
+    static doesntThrow(func, msg) {
+        try {
+            func();
+            return Result.success();
+        } catch (e) {
+            return Result.fail(msg ?? 'expected function not to throw');
+        }
+    }
+
+    static isEmptyString(testee, msg) {
+        return testee === ''
+            ? Result.success()
+            : Result.fail(msg ?? `expected empty string, got: ${testee}`);
+    }
+
+    static isFalse(testee, msgPrefix) {
+        return Assert.isEqual(testee, false, msgPrefix);
+    } 
+    
+    static isSameDate(actual, expected, msgPrefix){
+        return Assert.isEqual(actual.toISOString(), expected.toISOString(), msgPrefix);
     }
 }
 

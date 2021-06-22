@@ -1,31 +1,19 @@
-﻿import {loadHtmlAsync, loadJsonAsync} from '../io/io.js';
+﻿import {loadJsonAsync} from '../io/io.js';
+import {HtmlHelper} from "../framework/htmlHelper.js";
 
 let eventTemplate;
 let eventWrapper;
-const months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
-
 
 function renderYear(eventsInYear, year) {
-
-    eventWrapper.innerHTML += `<h2 class="year">${year}</h2>`;
-    eventsInYear.forEach(renderEvent);
+    eventWrapper.insertAdjacentHTML('beforeend', `<h2 class="year">${year}</h2>`);
+    eventsInYear
+        .sort((a, b) => a.from - b.from)
+        .forEach(renderEvent);
 }
 
+/** @param event {Event} */
 function renderEvent(event) {
-    let newEvent = eventTemplate;
-    const from = new Date(Date.parse(event.from));
-    const to = event.to && new Date(Date.parse(event.to));
-    const tbd = event.tbd ?? false;
-    let date = tbd ? 'Infos folgen' : `${from.toLocaleDateString()}${to ? ` - ${to.toLocaleDateString()}` : ''}`;
-    newEvent = newEvent.replace("$TITLE", event.title)
-        .replace("$DATE", date)
-        .replace("$DAY", tbd ? '??' : from.getDate().toString().padStart(2, '0'))
-        .replace("$MONTH", tbd ? '' : months[from.getMonth()])
-        .replace("$YEAR", from.getFullYear())
-        .replace("$LOCATION", `${event.where} - ${date}`)
-        .replace("$DESC", event.description ?? '')
-        .replaceAll("$TENU", getTenuOrDefault(event.tenu));
-    eventWrapper.insertAdjacentHTML('beforeend', newEvent);
+    eventWrapper.insertAdjacentHTML('beforeend', eventTemplate.replace(event));
 }
 
 function getTenuOrDefault(tenu) {
@@ -53,23 +41,78 @@ function getTenuOrDefault(tenu) {
     }
 }
 
+async function initializeEventTemplateAsync() {
+    eventTemplate = await (await HtmlHelper.registerTemplateFromUrlAsync('event', './events/event.html'))
+        .registerReplacer("$TITLE", event => event.title)
+        .registerReplacer("$DATE", event => event.date)
+        .registerReplacer("$DAY", event => event.day)
+        .registerReplacer("$MONTH", event => event.month)
+        .registerReplacer("$YEAR", event => event.from.getFullYear().toString())
+        .registerReplacer("$LOCATION", event => `${event.where} - ${event.date}`)
+        .registerReplacer("$DESC", event => event.description ?? '')
+        .registerReplacer("$TENU", event => event.tenu);
+}
+
 export async function init() {
     const events = (await loadJsonAsync('./events/events.json')).events;
 
-    eventTemplate ??= await loadHtmlAsync('./events/event.html');
+    if (!eventTemplate) {
+        await initializeEventTemplateAsync();
+    }
+
     eventWrapper = document.getElementById('event-wrapper');
-    const sortedEvents = events.sort((a, b) => a.from < b.from);
-    groupBy(sortedEvents, event => new Date(event.from).getFullYear())
+    events.map(e => new Event(e))
+        .groupBy(event => event.from.getFullYear())
         .forEach(renderYear);
 }
 
-function groupBy(data, keyFunc) {
+Array.prototype.groupBy = function (keyFunc) {
     let dict = new Map();
-    data.forEach(d => {
+    this.forEach(d => {
         const key = keyFunc(d);
         dict.set(key, [...dict.get(key) ?? [], d]);
     });
     return dict;
+}
+
+export class Event {
+    /** @type string */
+    title;
+    /** @type Date */
+    from;
+    /** @type ?Date */
+    to;
+    /** @type boolean */
+    tbd;
+    /** @type string */
+    where;
+    /** @type string */
+    tenu;
+    /** @type string */
+    description;
+    /** @type string */
+    day;
+    /** @type string */
+    date;
+    /** @type string */
+    month;
+    static months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+
+    constructor(obj) {
+        if (!obj?.title || !obj.from || !obj.where) {
+            throw new Error('Can not parse an object to an event, if at least one required field ["title", "from", "where"] is missing');
+        }
+        this.title = obj.title;
+        this.from = new Date(obj.from);
+        this.to = obj.to && new Date(obj.to);
+        this.tenu = getTenuOrDefault(obj?.tenu);
+        this.tbd = obj.tbd ?? false;
+        this.where = obj.where;
+        this.description = obj.description ?? '';
+        this.day = this.tbd ? '??' : this.from.getDate().toString().padStart(2, '0');
+        this.date = this.tbd ? 'Infos folgen' : `${this.from.toLocaleDateString()}${this.to ? ` - ${this.to.toLocaleDateString()}` : ''}`;
+        this.month = this.tbd ? '' : Event.months[this.from.getMonth()]
+    }
 }
 
 // TODO replace events.json

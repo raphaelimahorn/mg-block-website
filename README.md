@@ -1,6 +1,6 @@
 ﻿# MG Block
 
-## How TO
+## How To Use
 
 ### BV
 
@@ -51,7 +51,7 @@ Ein Anlass besteht aus folgenden Elementen:
 * _Optional:_ `"to"` Das Datum / der Zeitpunkt, wann der Anlass endet, im selber Format wie `"from"`
 * _Optional:_ `"tbd"` Kann auf `true` gesetzt werden, wenn noch nicht klar ist, wann der anlass genau stattfindet. Dann
   wird das Datum mit `??` angezeigt. Das Feld `"from"` muss trotzdem ausgefüllt werden. Es wird für die Sortierung
-  genutzt.
+  genutzt. Es kann aber auf den Tag verzichtet werden.
 * _Optional:_ `"tenu"` Hier kann angegeben werden, in welchem Tenü stattfindet. Entweder `"a"`, `"b"`, `"cps"` oder das
   feld wird gar nicht angegeben.
 * _Optional:_ `"description"` Hier kann eine Beschreibung angegeben werden.
@@ -95,9 +95,9 @@ a `hashchange` event occurs), the framework does the following, considering `loc
 3. If no `init` function exists or no js file can be found, the home module is loaded
 4. The children of the first `main` element in the dom are replaced with whatever is contained
    in `./<module>/<module>.html`
-   
-Further the framework provides a html helper class, where one can register modules, register replacers to this templates and
-then let the helper replace the placeholders in this template. e.g.
+
+Further the framework provides a html helper class, where one can register modules, register replacers to this templates
+and then let the helper replace the placeholders in this template. e.g.
 
 ```js
 HtmlHelper.registerTemplateFromString('example', '<h1>$PLACEHOLDER</h1>')
@@ -127,4 +127,11 @@ test('<Testee>', () => {
         });
     });
 });
+```
+
+It's also possible to apply it to an array, where the elements of this array are passed as the parameter of the func of
+it.
+
+```js
+[1, 2, 3].it('Should be positive', i => Assert.that(i >= 0));
 ```

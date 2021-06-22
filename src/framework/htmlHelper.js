@@ -3,7 +3,6 @@
 export class HtmlHelper{
 
     /**
-     *
      * @param name {string} the name of the template
      * @param path {string} the path where the html template can be found
      * @returns {Promise<Template>}
@@ -17,7 +16,6 @@ export class HtmlHelper{
     }
 
     /**
-     *
      * @param name {string} the name of the template
      * @param template {string} the html template
      * @returns {Template}
@@ -27,7 +25,6 @@ export class HtmlHelper{
     }
 
     /**
-     *
      * @param name {string} the name of the template
      * @param object {T}
      * @returns {string}
@@ -38,23 +35,15 @@ export class HtmlHelper{
 }
 
 /**
- * 
  * @type {Map<string, Template>}
  */
 let templates = new Map();
 
-/**
- * @typedef T
- */
+/** @template T */
 class Template {
-    /**
-     * @type string
-     */
+    /** @type string */
     template;
-    /**
-     * 
-     * @type {Map<string, function(T):string | string>}
-     */
+    /** @type {Map<string, function(?T):string | string>} */
     replacements = new Map();
 
     /** 
@@ -68,9 +57,8 @@ class Template {
     }
 
     /**
-     * 
      * @param what {string}
-     * @param withWhat {function(T):string | string}
+     * @param withWhat {function(?T):string | string}
      * @returns {Template}
      */
     registerReplacer(what, withWhat) {
@@ -81,8 +69,7 @@ class Template {
     }
 
     /**
-     * 
-     * @param object {T}
+     * @param object {?T}
      * @returns {string}
      */
     replace(object){
@@ -93,5 +80,4 @@ class Template {
         });
         return temp;
     }
-    
 }
