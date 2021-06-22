@@ -29,7 +29,8 @@ export class Framework {
         try {
             const module = getModuleByName(currentModule) ?? await Framework.loadModuleAsync(currentModule);
             await Framework.replaceContentAsync(module);
-        } catch (_) {
+        } catch (e) {
+            console.warn(e);
             await Framework.goHomeAsync();
         }
     }
