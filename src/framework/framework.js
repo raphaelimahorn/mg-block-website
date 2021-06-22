@@ -1,18 +1,14 @@
 ﻿import {loadHtmlAsync} from '../io/io.js';
 
 export class Framework {
-    constructor() {
-        Framework.mainNode = _ => document.getElementsByTagName('main')[0];
-    }
-
 
     static async replaceContentAsync(module) {
-        Framework.mainNode.innerHTML = await loadHtmlAsync(`./${module.name}/${module.name}.html`, console.warn);
+        document.getElementsByTagName('main')[0].innerHTML = await loadHtmlAsync(`./${module.name}/${module.name}.html`, console.warn);
         module?.init();
     }
 
     static async goHomeAsync() {
-        Framework.mainNode.innerHTML = await loadHtmlAsync(`./home.html`);
+        document.getElementsByTagName('main')[0].innerHTML = await loadHtmlAsync(`./home.html`);
     }
 
     static async loadModuleAsync(moduleName) {
