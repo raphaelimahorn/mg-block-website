@@ -1,7 +1,10 @@
 ﻿import {loadHtmlAsync} from '../io/io.js';
 
 export class Framework {
-    static mainNode = document.getElementsByTagName('main')[0];
+    constructor() {
+        Framework.mainNode = _ => document.getElementsByTagName('main')[0];
+    }
+
 
     static async replaceContentAsync(module) {
         Framework.mainNode.innerHTML = await loadHtmlAsync(`./${module.name}/${module.name}.html`, console.warn);
