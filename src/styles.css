@@ -78,7 +78,7 @@ main > * {
 }
 
 .bv-entry {
-    width: fit-content;
+    width: min-content;
     display: inline-flex;
     flex-direction: column;
     margin-top: 1em;
