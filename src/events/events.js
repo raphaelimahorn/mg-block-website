@@ -42,7 +42,7 @@ function getTenuOrDefault(tenu) {
 }
 
 async function initializeEventTemplateAsync() {
-    eventTemplate = await (await HtmlHelper.registerTemplateFromUrlAsync('event', './events/event.html'))
+    eventTemplate = (await HtmlHelper.registerTemplateFromUrlAsync('event', './events/event.html'))
         .registerReplacer("$TITLE", event => event.title)
         .registerReplacer("$DATE", event => event.date)
         .registerReplacer("$DAY", event => event.day)
