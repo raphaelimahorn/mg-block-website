@@ -75,29 +75,9 @@ Array.prototype.groupBy = function (keyFunc) {
     return dict;
 }
 
-export class Event {
-    /** @type string */
-    title;
-    /** @type Date */
-    from;
-    /** @type ?Date */
-    to;
-    /** @type boolean */
-    tbd;
-    /** @type string */
-    where;
-    /** @type string */
-    tenu;
-    /** @type string */
-    description;
-    /** @type string */
-    day;
-    /** @type string */
-    date;
-    /** @type string */
-    month;
-    static months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+const months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
 
+export class Event {
     constructor(obj) {
         if (!obj?.title || !obj.from || !obj.where) {
             throw new Error('Can not parse an object to an event, if at least one required field ["title", "from", "where"] is missing');
@@ -111,7 +91,7 @@ export class Event {
         this.description = obj.description ?? '';
         this.day = this.tbd ? '??' : this.from.getDate().toString().padStart(2, '0');
         this.date = this.tbd ? 'Infos folgen' : `${this.from.toLocaleDateString()}${this.to ? ` - ${this.to.toLocaleDateString()}` : ''}`;
-        this.month = this.tbd ? '' : Event.months[this.from.getMonth()]
+        this.month = this.tbd ? '' : months[this.from.getMonth()]
     }
 }
 
