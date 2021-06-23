@@ -1,17 +1,17 @@
 ﻿import {loadHtmlAsync} from '../io/io.js';
 
-export class HtmlHelper{
+export class HtmlHelper {
 
     /**
      * @param name {string} the name of the template
      * @param path {string} the path where the html template can be found
      * @returns {Promise<Template>}
      */
-    static async registerTemplateFromUrlAsync(name, path){
+    static async registerTemplateFromUrlAsync(name, path) {
         if (templates.has(name)) return templates.get(name);
-        
+
         const template = await loadHtmlAsync(path);
-        
+
         return this.registerTemplateFromString(name, template);
     }
 
@@ -20,8 +20,8 @@ export class HtmlHelper{
      * @param template {string} the html template
      * @returns {Template}
      */
-    static registerTemplateFromString(name, template){
-        return templates.get(name) ?? new Template(name, template);
+    static registerTemplateFromString(name, template) {
+        return templates.get(name) ?? createAndRegisterTemplate(name, template);
     }
 
     /**
@@ -29,9 +29,15 @@ export class HtmlHelper{
      * @param object {T}
      * @returns {string}
      */
-    static fillInTemplate(name, object){
+    static fillInTemplate(name, object) {
         return templates.get(name)?.replace(object) ?? '';
     }
+}
+
+function createAndRegisterTemplate(name, template) {
+    const newTemplate = new Template(name, template);
+    templates.set(name, newTemplate);
+    return newTemplate;
 }
 
 /**
@@ -41,19 +47,15 @@ let templates = new Map();
 
 /** @template T */
 class Template {
-    /** @type string */
-    template;
-    /** @type {Map<string, function(?T):string | string>} */
-    replacements = new Map();
 
-    /** 
-     * creates and registers a Template
+    /**
      * @param name {string} the name of the template
      * @param template {string} a html template
      */
     constructor(name, template) {
         this.template = template;
-        templates.set(name, this);
+        /** @type {Map<string, function(?T):string | string>} */
+        this.replacements = new Map();
     }
 
     /**
@@ -72,10 +74,10 @@ class Template {
      * @param object {?T}
      * @returns {string}
      */
-    replace(object){
+    replace(object) {
         let temp = this.template;
         this.replacements.forEach((replacer, from) => {
-            const to = (typeof replacer === 'function') ? replacer(object) : replacer; 
+            const to = (typeof replacer === 'function') ? replacer(object) : replacer;
             temp = temp.replaceAll(from, to);
         });
         return temp;
