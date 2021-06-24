@@ -1,5 +1,3 @@
-# ⚠️Does currently not run with safari ⚠️ 
-
 # MG Block
 
 ## How To Use
