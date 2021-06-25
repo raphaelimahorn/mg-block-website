@@ -18,7 +18,7 @@ function renderBvs(bvs) {
     if (!node) return;
 
     for (const [sinner, amount] of Object.entries(bvs)) {
-        renderBv(sinner, amount, node);
+        amount && renderBv(sinner, amount, node);
     }
 }
 
