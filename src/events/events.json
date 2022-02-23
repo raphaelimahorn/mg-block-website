@@ -10,18 +10,22 @@
     },
     {
       "title": "AAR",
-      "from": "2022-02",
+      "from": "2022-02-12",
       "where": "Zürich",
       "tenu": "cps",
-      "tbd": true,
       "description": "Ein Rückblick auf die vergangene Marschsaison und Initialisierung der nächsten."
     },
     {
       "title": "Marsch um den Zugersee",
-      "from": "2022-05",
+      "from": "2022-04-23",
       "where": "Zug",
-      "tenu": "b",
-      "tbd": true
+      "tenu": "b"
+    },
+    {
+      "title": "12K3 Gedenkmarsch",
+      "from": "2022-04-03",
+      "where": "Basel",
+      "tenu": "b"
     },
     {
       "title": "Berner 2TM",
