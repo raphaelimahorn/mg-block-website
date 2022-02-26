@@ -62,6 +62,7 @@ export async function init() {
 
     eventWrapper = document.getElementById('event-wrapper');
     events.map(e => new Event(e))
+        .filter(e => (e.to ?? e.from) > new Date())
         .groupBy(event => event.from.getFullYear())
         .forEach(renderYear);
 }
