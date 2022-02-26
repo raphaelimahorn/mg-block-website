@@ -1,4 +1,4 @@
-﻿import {HtmlHelper} from '../../src/framework/htmlHelper.js';
+﻿import {HtmlHelper} from '../../docs/framework/htmlHelper.js';
 import {desc, it, test} from '../Test.js';
 import {Assert} from '../Assert.js';
 

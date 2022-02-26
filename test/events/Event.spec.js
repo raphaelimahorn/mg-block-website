@@ -1,5 +1,5 @@
 ﻿import {desc, it, test} from "../Test.js";
-import {Event} from "../../src/events/events.js";
+import {Event} from "../../docs/events/events.js";
 import {Assert} from "../Assert.js";
 
 const expectedFailureMsg = 'Can not parse an object to an event, if at least one required field ["title", "from", "where"] is missing';
