@@ -1,5 +1,5 @@
 ﻿export async function loadJsonAsync(path, handler) {
-    const response = await fetch(path);
+    const response = await fetch(path, {cache: "no-cache"});
 
     if (!response.ok) {
         handler(response);
