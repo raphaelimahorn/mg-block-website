@@ -1,18 +1,62 @@
 ﻿{
   "events": [
     {
-      "title": "4-Daagse - CH-Edition",
-      "from": "2021-07-20",
-      "to": "2021-07-23",
-      "where": "St.Gallen",
-      "tenu": "b",
-      "description": "Das Detachément Réduit absolviert den diesjähringen 4-Tagesmarsch im Raum St.Gallen. Wer einen Bierhalt ausrichten möchte melde sich bei Silber."
+      "title": "MT 1",
+      "from": "2022-03-13",
+      "where": "Baden",
+      "tenu": "b"
+    },
+    {
+      "title": "MT 2",
+      "from": "2022-03-27",
+      "where": "Hochdorf",
+      "tenu": "b"
+    },
+    {
+      "title": "MT 4",
+      "from": "2022-04-15",
+      "where": "Thur Töss",
+      "tenu": "b"
+    },
+    {
+      "title": "MT 6",
+      "from": "2022-05-08",
+      "where": "Bielersee",
+      "tenu": "b"
+    },
+    {
+      "title": "MT 7",
+      "from": "2022-05-22",
+      "where": "Glatt",
+      "tenu": "b"
+    },
+    {
+      "title": "MT 9",
+      "from": "2022-06-04",
+      "where": "Zürich"
+    },
+    {
+      "title": "MT 10",
+      "from": "2022-06-05",
+      "where": "Pfäffikon"
+    },
+    {
+      "title": "MT 11",
+      "from": "2022-06-06",
+      "where": "Stäfa"
+    },
+    {
+      "title": "MT 13",
+      "from": "2022-06-25",
+      "where": "Stans",
+      "tenu": "b"
     },
     {
       "title": "AAR",
-      "from": "2022-02-12",
-      "where": "Zürich",
+      "from": "2023-02",
+      "where": "TBD",
       "tenu": "cps",
+      "tbd": true,
       "description": "Ein Rückblick auf die vergangene Marschsaison und Initialisierung der nächsten."
     },
     {
@@ -33,7 +77,15 @@
       "to": "2022-05-29",
       "where": "Bern",
       "tenu": "b",
-      "description": "Der traditionelle schweizer Zweitagemarsch bietet ein hervorragendes Training und ist zwingend zu absolvieren um sich für den 4-Daagse anmelden zu können."
+      "description": "Der traditionelle Schweizer Zweitagemarsch bietet ein hervorragendes Training und ist zwingend zu absolvieren um sich für den 4-Daagse anmelden zu können."
+    },
+    {
+      "title": "Bündner 2TM",
+      "from": "2022-06-11",
+      "to": "2022-06-12",
+      "where": "Graubünden",
+      "tenu": "b",
+      "description": "2 x 20 Km"
     },
     {
       "title": "4-Daagse",
