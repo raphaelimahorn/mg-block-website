@@ -85,7 +85,14 @@
       "to": "2022-06-12",
       "where": "Graubünden",
       "tenu": "b",
-      "description": "2 x 20 Km"
+      "description": "2 x 20 km"
+    },
+    {
+      "title": "Bieler Lauftage",
+      "from": "2022-06-11",
+      "where": "Biel",
+      "tenu": "b",
+      "description": "40 km oder 100 km"
     },
     {
       "title": "4-Daagse",
