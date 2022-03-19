@@ -52,14 +52,6 @@
       "tenu": "b"
     },
     {
-      "title": "AAR",
-      "from": "2023-02",
-      "where": "TBD",
-      "tenu": "cps",
-      "tbd": true,
-      "description": "Ein Rückblick auf die vergangene Marschsaison und Initialisierung der nächsten."
-    },
-    {
       "title": "Marsch um den Zugersee",
       "from": "2022-04-23",
       "where": "Zug",
@@ -72,7 +64,7 @@
       "tenu": "b"
     },
     {
-      "title": "Berner 2TM",
+      "title": "Berner 2TM Remoteversion",
       "from": "2022-05-28",
       "to": "2022-05-29",
       "where": "Bern",
@@ -101,6 +93,14 @@
       "where": "Nijmegen NL",
       "tenu": "b",
       "description": "Nach 2019 wird der 4-Tagesmarsch 2022 endlich wieder in Holland durchgeführt."
+    },
+    {
+      "title": "AAR",
+      "from": "2023-02",
+      "where": "TBD",
+      "tenu": "cps",
+      "tbd": true,
+      "description": "Ein Rückblick auf die vergangene Marschsaison und Initialisierung der nächsten."
     }
   ]
 }
