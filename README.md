@@ -4,7 +4,7 @@
 
 ### BV
 
-In der Datei <a href="./src/bv/bv.json">bv.json</a> können BV nachgetragen werden. Dabei ist zu beachten, dass folgendes
+In der Datei <a href="./docs/bv/bv.json">bv.json</a> können BV nachgetragen werden. Dabei ist zu beachten, dass folgendes
 Schema eingehalten wird.
 
 ```json
@@ -21,7 +21,7 @@ sehen.
 
 ### Anlässe
 
-In der Datei <a href="./src/events/events.json">events.json</a> können Anlässe nachgetragen werden. Dabei ist zu
+In der Datei <a href="./docs/events/events.json">events.json</a> können Anlässe nachgetragen werden. Dabei ist zu
 beachten, dass folgendes Schema eingehalten wird.
 
 ```json
