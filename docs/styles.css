@@ -171,3 +171,21 @@ h2.year {
 .event .location {
     grid-area: location;
 }
+
+.event.canceled {
+    position: relative;
+}
+
+.event.canceled * {
+    filter: contrast(0.3) saturate(0);
+}
+
+.event.canceled::after {
+    content: 'Abgesagt';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    font-size: 4rem;
+    text-shadow: 0 0 10px #bbb;
+}

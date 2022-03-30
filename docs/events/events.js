@@ -44,6 +44,7 @@ function getTenuOrDefault(tenu) {
 async function initializeEventTemplateAsync() {
     eventTemplate = (await HtmlHelper.registerTemplateFromUrlAsync('event', './events/event.html'))
         .registerReplacer("$TITLE", event => event.title)
+        .registerReplacer("$ADDITIONALCLASS", event => event.getAdditionalClasses())
         .registerReplacer("$DATE", event => event.date)
         .registerReplacer("$DAY", event => event.day)
         .registerReplacer("$MONTH", event => event.month)
@@ -92,7 +93,16 @@ export class Event {
         this.description = obj.description ?? '';
         this.day = this.tbd ? '??' : this.from.getDate().toString().padStart(2, '0');
         this.date = this.tbd ? 'Infos folgen' : `${this.from.toLocaleDateString()}${this.to ? ` - ${this.to.toLocaleDateString()}` : ''}`;
-        this.month = this.tbd ? '' : months[this.from.getMonth()]
+        this.month = this.tbd ? '' : months[this.from.getMonth()];
+        this.canceled = !!obj.canceled;
+    }
+    
+    getAdditionalClasses(){
+        let additionalClasses = '';
+        if (this.canceled){
+            additionalClasses += ' canceled';
+        }
+        return additionalClasses;
     }
 }
 

@@ -55,13 +55,15 @@
       "title": "Marsch um den Zugersee",
       "from": "2022-04-23",
       "where": "Zug",
-      "tenu": "b"
+      "tenu": "b",
+      "canceled": true
     },
     {
       "title": "12K3 Gedenkmarsch",
       "from": "2022-04-03",
       "where": "Basel",
-      "tenu": "b"
+      "tenu": "b",
+      "canceled": true
     },
     {
       "title": "Berner 2TM Remoteversion",
