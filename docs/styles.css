@@ -4,7 +4,6 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-size: 100vw 100vh;
     background: linear-gradient(160deg, #ddd, #aaa) fixed;
 }
 
