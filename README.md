@@ -55,9 +55,10 @@ Ein Anlass besteht aus folgenden Elementen:
 * _Optional:_ `"tenu"` Hier kann angegeben werden, in welchem Tenü stattfindet. Entweder `"a"`, `"b"`, `"cps"` oder das
   feld wird gar nicht angegeben.
 * _Optional:_ `"description"` Hier kann eine Beschreibung angegeben werden.
+* _Optional:_ `"canceled"` Hier kann  mit `true` angegeben werden, dass dieser Anlass abgesagt wurde.
 
 Dabei ist zu beachten, dass der linke Teil vom `:` jeweils in Anführungs- und Schlusszeichen `"` steht. Bis auf `tbd`
-sind alle werte auf der rechten Seite ebenfalls in Anführungs- und Schlusszeichen zu setzten. Jedes Element bis auf die
+sind alle Werte auf der rechten Seite ebenfalls in Anführungs- und Schlusszeichen zu setzten. Jedes Element bis auf das
 letzte muss mit einem Komma `,` enden. Nun muss nur noch die Seite neu geladen werden, um die Änderungen zu sehen.
 
 In einer künftigen Version wird dieses Modul potentiel eine Schnittstelle an einen öffentlichen Kalender aufweisen.
