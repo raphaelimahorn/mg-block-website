@@ -53,7 +53,7 @@
     },
     {
       "title": "Marsch um den Zugersee",
-      "from": "2022-04-23",
+      "from": "2023-04-29",
       "where": "Zug",
       "tenu": "b"
     },
@@ -65,9 +65,9 @@
       "canceled": true
     },
     {
-      "title": "Berner 2TM Remoteversion",
-      "from": "2022-05-28",
-      "to": "2022-05-29",
+      "title": "Berner 2TM",
+      "from": "2023-06-10",
+      "to": "2023-06-11",
       "where": "Bern",
       "tenu": "b",
       "description": "Der traditionelle Schweizer Zweitagemarsch bietet ein hervorragendes Training und ist zwingend zu absolvieren um sich für den 4-Daagse anmelden zu können."
@@ -89,11 +89,11 @@
     },
     {
       "title": "4-Daagse",
-      "from": "2022-07-16",
-      "to": "2022-07-22",
+      "from": "2023-07-17",
+      "to": "2023-07-23",
       "where": "Nijmegen NL",
       "tenu": "b",
-      "description": "Nach 2019 wird der 4-Tagesmarsch 2022 endlich wieder in Holland durchgeführt."
+      "description": "Das Highlight des Jahres."
     },
     {
       "title": "AAR",
