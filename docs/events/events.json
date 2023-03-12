@@ -2,67 +2,62 @@
   "events": [
     {
       "title": "MT 1",
-      "from": "2022-03-13",
-      "where": "Baden",
+      "from": "2023-04-01",
+      "where": "Obersee",
       "tenu": "b"
     },
     {
       "title": "MT 2",
-      "from": "2022-03-27",
+      "from": "2023-04-16",
       "where": "Hochdorf",
       "tenu": "b"
     },
     {
       "title": "MT 4",
-      "from": "2022-04-15",
-      "where": "Thur Töss",
+      "from": "2023-05-01",
+      "where": "Brunnen",
       "tenu": "b"
     },
     {
+      "title": "MT 5",
+      "from": "2023-05-07",
+      "where": "Zürich"
+    },
+    {
       "title": "MT 6",
-      "from": "2022-05-08",
-      "where": "Bielersee",
+      "from": "2023-05-20",
+      "where": "Baden",
       "tenu": "b"
     },
     {
       "title": "MT 7",
-      "from": "2022-05-22",
-      "where": "Glatt",
+      "from": "2023-05-27",
+      "where": "Zürichsee",
+      "tenu": "b"
+    },
+    {
+      "title": "MT 8",
+      "from": "2023-05-28",
+      "where": "Zürichsee",
       "tenu": "b"
     },
     {
       "title": "MT 9",
-      "from": "2022-06-04",
-      "where": "Zürich"
-    },
-    {
-      "title": "MT 10",
-      "from": "2022-06-05",
-      "where": "Pfäffikon"
-    },
-    {
-      "title": "MT 11",
-      "from": "2022-06-06",
-      "where": "Stäfa"
-    },
-    {
-      "title": "MT 13",
-      "from": "2022-06-25",
-      "where": "Stans",
+      "from": "2023-05-29",
+      "where": "Zürichsee",
       "tenu": "b"
+    },
+    {
+      "title": "Diekirch",
+      "from": "2023-06-03",
+      "To": "2023-06-04",
+      "where": "Diekirch"
     },
     {
       "title": "Marsch um den Zugersee",
       "from": "2023-04-29",
       "where": "Zug",
       "tenu": "b"
-    },
-    {
-      "title": "12K3 Gedenkmarsch",
-      "from": "2022-04-03",
-      "where": "Basel",
-      "tenu": "b",
-      "canceled": true
     },
     {
       "title": "Berner 2TM",
@@ -73,24 +68,9 @@
       "description": "Der traditionelle Schweizer Zweitagemarsch bietet ein hervorragendes Training und ist zwingend zu absolvieren um sich für den 4-Daagse anmelden zu können."
     },
     {
-      "title": "Bündner 2TM",
-      "from": "2022-06-11",
-      "to": "2022-06-12",
-      "where": "Graubünden",
-      "tenu": "b",
-      "description": "2 x 20 km"
-    },
-    {
-      "title": "Bieler Lauftage",
-      "from": "2022-06-11",
-      "where": "Biel",
-      "tenu": "b",
-      "description": "40 km oder 100 km"
-    },
-    {
       "title": "4-Daagse",
-      "from": "2023-07-17",
-      "to": "2023-07-23",
+      "from": "2023-07-15",
+      "to": "2023-07-22",
       "where": "Nijmegen NL",
       "tenu": "b",
       "description": "Das Highlight des Jahres."
@@ -101,6 +81,18 @@
       "where": "Zürich",
       "tenu": "cps",
       "description": "Ein Rückblick auf die vergangene Marschsaison und Initialisierung der nächsten."
+    },
+    {
+      "title": "MT 12",
+      "from": "2023-06-17",
+      "where": "Bielersee",
+      "tenu": "b"
+    },
+    {
+      "title": "MT 13",
+      "from": "2023-06-24",
+      "where": "Thur Töss",
+      "tenu": "b"
     }
   ]
 }
