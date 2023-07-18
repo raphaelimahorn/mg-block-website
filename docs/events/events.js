@@ -106,4 +106,5 @@ export class Event {
     }
 }
 
+// TODO downloadable calendar
 // TODO replace events.json
