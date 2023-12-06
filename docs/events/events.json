@@ -2,97 +2,98 @@
   "events": [
     {
       "title": "MT 1",
-      "from": "2023-04-01",
+      "from": "2024-03-16",
       "where": "Obersee",
       "tenu": "b"
     },
     {
       "title": "MT 2",
-      "from": "2023-04-16",
-      "where": "Hochdorf",
+      "from": "2024-03-30",
+      "where": "Aarau",
+      "tenu": "b"
+    },
+    {
+      "title": "MT 3",
+      "from": "2024-04-06",
+      "where": "Basel",
       "tenu": "b"
     },
     {
       "title": "MT 4",
-      "from": "2023-05-01",
-      "where": "Brunnen",
+      "from": "2024-04-20",
+      "where": "Luzern",
       "tenu": "b"
     },
     {
-      "title": "MT 5",
-      "from": "2023-05-07",
-      "where": "Zürich"
-    },
-    {
       "title": "MT 6",
-      "from": "2023-05-20",
-      "where": "Baden",
+      "from": "2024-05-08",
+      "where": "Rigi",
       "tenu": "b"
     },
     {
       "title": "MT 7",
-      "from": "2023-05-27",
-      "where": "Zürichsee",
+      "from": "2024-05-11",
+      "where": "Zürich",
       "tenu": "b"
     },
     {
       "title": "MT 8",
-      "from": "2023-05-28",
-      "where": "Zürichsee",
+      "from": "2024-05-18",
+      "where": "Zofingen",
       "tenu": "b"
     },
     {
       "title": "MT 9",
-      "from": "2023-05-29",
-      "where": "Zürichsee",
+      "from": "2024-05-19",
+      "where": "Zofingen",
+      "tenu": "b"
+    },
+    {
+      "title": "MT 11",
+      "from": "2024-06-15",
+      "where": "Murten",
+      "tenu": "b"
+    },
+    {
+      "title": "MT 12",
+      "from": "2024-06-29",
+      "where": "Biel",
       "tenu": "b"
     },
     {
       "title": "Diekirch",
-      "from": "2023-06-03",
-      "To": "2023-06-04",
+      "from": "2024-06-03",
+      "To": "2024-06-04",
       "where": "Diekirch"
     },
     {
       "title": "Marsch um den Zugersee",
-      "from": "2023-04-29",
+      "from": "2024-04-27",
       "where": "Zug",
       "tenu": "b"
     },
     {
       "title": "Berner 2TM",
-      "from": "2023-06-10",
-      "to": "2023-06-11",
+      "from": "2024-06-01",
+      "to": "2024-06-02",
       "where": "Bern",
       "tenu": "b",
       "description": "Der traditionelle Schweizer Zweitagemarsch bietet ein hervorragendes Training und ist zwingend zu absolvieren um sich für den 4-Daagse anmelden zu können."
     },
     {
       "title": "4-Daagse",
-      "from": "2023-07-15",
-      "to": "2023-07-22",
+      "from": "2024-07-13",
+      "to": "2024-07-20",
       "where": "Nijmegen NL",
       "tenu": "b",
       "description": "Das Highlight des Jahres."
     },
     {
       "title": "AAR",
-      "from": "2023-01-07",
+      "from": "2024-01-26",
       "where": "Zürich",
       "tenu": "cps",
       "description": "Ein Rückblick auf die vergangene Marschsaison und Initialisierung der nächsten."
-    },
-    {
-      "title": "MT 12",
-      "from": "2023-06-17",
-      "where": "Bielersee",
-      "tenu": "b"
-    },
-    {
-      "title": "MT 13",
-      "from": "2023-06-24",
-      "where": "Thur Töss",
-      "tenu": "b"
     }
   ]
 }
